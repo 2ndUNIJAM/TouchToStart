@@ -79,6 +79,20 @@ MonoBehaviour:
       _division: 0.5
     UseDivided2AsCamRect: 0
   BackgroundCam: {fileID: 6618692820908455988}
+  OpenStageTweenDuration: 5
+  ZoomTweenDuration: 5
+  RenderRect:
+    serializedVersion: 2
+    x: 0.5
+    y: 0.5
+    width: 0
+    height: 0
+  _validRect:
+    serializedVersion: 2
+    x: 0
+    y: 0.39571694
+    width: 1
+    height: 0.20856613
   UpdateInEditMode: 0
 --- !u!81 &4714801145828627814
 AudioListener:
@@ -131,7 +145,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
+  m_BackGroundColor: {r: 0.81960785, g: 0.81960785, b: 0.81960785, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -259,7 +273,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
+  m_BackGroundColor: {r: 0.81960785, g: 0.81960785, b: 0.81960785, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -515,7 +529,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
+  m_BackGroundColor: {r: 0.81960785, g: 0.81960785, b: 0.81960785, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -643,7 +657,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.4745098, g: 0.3482436, b: 0.19215688, a: 0}
+  m_BackGroundColor: {r: 0.81960785, g: 0.81960785, b: 0.81960785, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -661,9 +675,9 @@ Camera:
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
-    y: 0.40316573
+    y: 0
     width: 1
-    height: 0.19366854
+    height: 1
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
@@ -771,7 +785,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
+  m_BackGroundColor: {r: 0.81960785, g: 0.81960785, b: 0.81960785, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -899,7 +913,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
+  m_BackGroundColor: {r: 0.81960785, g: 0.81960785, b: 0.81960785, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0

@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using TouchToStart.Utility;
 using UnityEditor;
 using UnityEngine;
@@ -200,6 +202,14 @@ namespace TouchToStart
         public SplitableCams[] Cams;
         public Camera BackgroundCam;
 
+        public float OpenStageTweenDuration;
+        public float ZoomTweenDuration;
+        
+        public Rect RenderRect;
+        [SerializeField]
+        private Rect _validRect;
+
+        public int CurrentFirstCamIndex { get; private set; } = 0;
         public int MaxDepth => Cams.Length;
 
 #if UNITY_EDITOR
@@ -221,14 +231,15 @@ namespace TouchToStart
 
             float x = (Screen.width - DefaultScreenWidth) / 2f / Screen.width;
             float y = (Screen.height - DefaultScreenHeight) / 2f / Screen.height;
-            
-            Cams[0].ScreenRect.Rect = new Rect(x, y, 1-2*x, 1-2*y);
-            BackgroundCam.rect = Cams[0].ScreenRect.Rect;
+
+            _validRect = new Rect(x, y, 1 - 2 * x, 1 - 2 * y);
         }
 
         private void Start()
         {
             Initialize();
+            RenderRect = new Rect(0.5f, 0.5f, 0, 0);
+            DOTween.To(() => RenderRect, (rect) => RenderRect = rect, _validRect, OpenStageTweenDuration);
         }
 
         private void Update()
@@ -247,7 +258,9 @@ namespace TouchToStart
                 isInitialized = true;
             }
 #endif
-
+            Cams[0].ScreenRect.Rect = RenderRect;
+            BackgroundCam.rect = RenderRect;
+            
             foreach (var cam in Cams)
             {
                 cam.UpdateRect();
@@ -298,11 +311,38 @@ namespace TouchToStart
 
         public void ZoomIn(int camDepth)
         {
+            for (int i = 0; i < camDepth; i++)
+            {
+                if (Cams[i].UseDivided2AsCamRect)
+                {
+                    DOTween.To(Cams[i].ScreenRect.GetDivision, Cams[i].ScreenRect.SetDivision, 1, ZoomTweenDuration);
+                }
+                else
+                {
+                    DOTween.To(Cams[i].ScreenRect.GetDivision, Cams[i].ScreenRect.SetDivision, 0, ZoomTweenDuration);
+                }
+            }
+
+            StartCoroutine(Wait(ZoomTweenDuration, () => RearrangeCamDepth(camDepth)));
         }
 
-        public void ZoomOut(int camDepth)
+        IEnumerator Wait(float time, Action action)
         {
+            yield return new WaitForSeconds(time);
+            action?.Invoke();
+        }
+
+        private void RearrangeCamDepth(int newFirstDepth)
+        {
+            SplitableCams[] tempArr = new SplitableCams[Cams.Length];
+            Array.Copy(Cams, newFirstDepth, tempArr, 0, Cams.Length - newFirstDepth);
+            Array.Copy(Cams, 0, tempArr, Cams.Length - newFirstDepth, newFirstDepth);
+            Array.Copy(tempArr, Cams, Cams.Length);
+
+            CurrentFirstCamIndex += newFirstDepth;
+            CurrentFirstCamIndex = CurrentFirstCamIndex % MaxDepth;
             
+            Initialize();
         }
 
         public void SetDivisions(float[] divisionsOfCam)

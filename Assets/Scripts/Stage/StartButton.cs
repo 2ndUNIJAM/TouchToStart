@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections;
+using TouchToStart.Sound;
 using UnityEngine;
 
 namespace TouchToStart
 {
     public class StartButton : MonoBehaviour
     {
-        public static event Action OnStartButtonClicked;
         public event Action OnButtonClicked;
 
         public float Delay;
@@ -26,7 +26,7 @@ namespace TouchToStart
                 StartCoroutine(DestroyAfter(Delay));
                 GetComponent<Collider2D>().enabled = false;
                 _triggered = true;
-                OnStartButtonClicked?.Invoke();
+                AudioEvents.instance.PlaySound(SoundType.success);
                 OnButtonClicked?.Invoke();
             }
         }

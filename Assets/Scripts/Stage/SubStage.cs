@@ -41,14 +41,16 @@ namespace TouchToStart
 
             GameObject go;
             
-            go = Instantiate(Stage.instance.BoundaryPrefab, ScalableParent);
-            go.SetLayerWithChildren(_layer);
-            _clearObjects.Add(go);
+            // go = Instantiate(Stage.instance.BoundaryPrefab, ScalableParent);
+            // go.SetLayerWithChildren(_layer);
+            // _clearObjects.Add(go);
             
-            go = Instantiate(Stage.instance.MetaMousePrefab, Data.MouseStartPosition, Quaternion.identity, transform);
-            go.SetLayerWithChildren(_layer);
-            _clearObjects.Add(go);
-            MetaMouse = go.GetComponent<MetaMouse>();
+            // go = Instantiate(Stage.instance.MetaMousePrefab, Data.MouseStartPosition, Quaternion.identity, transform);
+            // go.SetLayerWithChildren(_layer);
+            // _clearObjects.Add(go);
+            // MetaMouse = go.GetComponent<MetaMouse>();
+            MetaMouse.StartPosition = Data.MouseStartPosition;
+            MetaMouse.MouseReset();
 
             foreach (var position in Data.GoalPositions.Values)
             {

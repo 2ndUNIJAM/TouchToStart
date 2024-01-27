@@ -380,6 +380,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2321542200183790937}
+  - component: {fileID: 2304187039603405535}
   m_Layer: 0
   m_Name: CartControl
   m_TagString: Untagged
@@ -404,6 +405,19 @@ Transform:
   - {fileID: 3015208366764739933}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2304187039603405535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3437387376639952332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de65189820354d37b08680e3d601a240, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TargetMouse: {fileID: 0}
 --- !u!1 &4367335877777297518
 GameObject:
   m_ObjectHideFlags: 0

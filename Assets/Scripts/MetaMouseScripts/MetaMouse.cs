@@ -3,14 +3,12 @@ using UnityEngine;
 
 public class MetaMouse : MonoBehaviour
 {
-    public static MetaMouse ZeroDepthMouse => MouseList[ZeroDepthMouseIndex];
-    public static int ZeroDepthMouseIndex;
-    public static List<MetaMouse> MouseList;
+    public static MetaMouse ZeroDepthMouse => MouseList[0];
+    public static List<MetaMouse> MouseList = new List<MetaMouse>();
     public float Speed;
 
     void Awake()
     {
-        MouseList = new List<MetaMouse>();
         MouseList.Add(this);
     }
 

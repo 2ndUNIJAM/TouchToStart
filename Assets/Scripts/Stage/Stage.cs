@@ -1,14 +1,15 @@
 ﻿using System;
 using TouchToStart.Utility;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace TouchToStart
 {
     public class Stage : Singleton<Stage>
     {
         public GameObject MetaMousePrefab;
-        public GameObject GoalPrefab;
-        public GameObject ObstaclePrefab;
+        [FormerlySerializedAs("GoalPrefab")] public GameObject StartButtonPrefab;
+        [FormerlySerializedAs("ObstaclePrefab")] public GameObject DeleteButtonPrefab;
 
         public GameObject WASDPrefab;
         public GameObject InverseWASDPrefab;
@@ -17,10 +18,12 @@ namespace TouchToStart
 
         public GameObject BoundaryPrefab;
 
+        public StageListScriptable StageListData;
         public StageScriptable StageData;
         public SubStage[] SubStages;
 
-        private int _currentSubStage;
+        public int CurrentStage;
+        public int CurrentSubStage;
         
         public SubStage this[int index]
         {
@@ -35,23 +38,47 @@ namespace TouchToStart
             }
         }
 
-        private void Awake()
+        private void Start()
         {
             foreach (var subStage in SubStages)
             {
                 subStage.Data = StageData;
             }
+            
+            this[0].Spawn();
         }
 
-        private void Start()
+        public void ClearStage()
         {
-            SubStages[0].Spawn();
+            CurrentStage++;
+            StageData = StageListData.Stages[CurrentStage];
+            
+            int targetZoomIndex = (StageData.MaxDepth + 1) / 2 * 2;
+            CameraSplit.instance.ZoomIn(targetZoomIndex, () =>
+            {
+                for (int i = 0; i < SubStages.Length; i++)
+                {
+                    SubStages[i].ClearRemains();
+                }
+                
+                MetaMouse.MouseList.Clear();
+                Start();
+            });
         }
 
         public void ClearSubStage()
         {
-            _currentSubStage++;
-            SubStages[_currentSubStage].Spawn();
+            CurrentSubStage++;
+            if (CurrentSubStage > StageData.MaxDepth)
+            {
+                ClearStage();
+                CurrentSubStage = 0;
+            }
+            else
+            {
+                SubStages[CurrentSubStage].Spawn();
+                SubStages[CurrentSubStage - 1].Controller.TargetMouse = SubStages[CurrentSubStage].MetaMouse;
+            }
         }
 
         public void Fail()

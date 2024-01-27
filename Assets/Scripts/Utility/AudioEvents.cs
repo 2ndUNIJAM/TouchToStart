@@ -14,6 +14,8 @@ namespace TouchToStart.Sound
         fail = 1,
         press = 2,
         release = 3,
+
+        edgedenied = 4,
     }
 }
 

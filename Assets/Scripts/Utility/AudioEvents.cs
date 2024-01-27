@@ -2,35 +2,40 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using TouchToStart.Utility;
+using TouchToStart.Sound;
 //using TouchToStart.Utility;
 
-[RequireComponent(typeof(AudioSource))]
-public class AudioEvents : MonoBehaviour
+namespace TouchToStart.Sound
 {
-    [SerializeField]
-    private AudioClip soundSuccess, soundFail, soundOnbutton, soundReleasebutton;    
+    public enum SoundType
+    {
+        success = 0,
+        fail = 1,
+        press = 2,
+        release = 3,
+    }
+}
+
+
+[RequireComponent(typeof(AudioSource))]
+public class AudioEvents : Singleton<AudioEvents>
+{
+    [SerializeReference]
+    public AudioClip[] sounds;
     
     AudioSource audioSource;
-    private float defaultVolume = 0.8f;
 
-
-    void Start() {
+    [SerializeField]
+    public float defaultVolume = 0.8f;
+    
+    void Start()
+    {
         audioSource = GetComponent<AudioSource>();
         audioSource.playOnAwake = false;
     }
-    public void PlaySuccess() {
-        audioSource.PlayOneShot(soundSuccess, defaultVolume);
-    }
-
-    public void PlayFail() {
-        audioSource.PlayOneShot(soundFail, defaultVolume);
-    }
-
-    public void PlayPressButton() {
-        audioSource.PlayOneShot(soundOnbutton, defaultVolume);
-    }
-
-    public void PlayReleaseButton() {
-        audioSource.PlayOneShot(soundReleasebutton, defaultVolume);
+    public void PlaySound(SoundType soundtype)
+    {
+        audioSource.PlayOneShot(sounds[(int)soundtype], defaultVolume);
     }
 }

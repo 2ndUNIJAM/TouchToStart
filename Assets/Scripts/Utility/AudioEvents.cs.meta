@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 6dc9dbc5cddfb374f9d55b75a43ed478
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - soundSuccess: {fileID: 8300000, guid: f0c7a299cecad0841813cb5206c39280, type: 3}
+  - soundFail: {fileID: 8300000, guid: 11b459fb5af683a48b88fc9feed999a7, type: 3}
+  - soundOnbutton: {fileID: 8300000, guid: f686385e2125b1b49adf4a1ee0867888, type: 3}
+  - soundReleasebutton: {fileID: 8300000, guid: 4c3bece50dd6493428a78ba1b8a08525, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

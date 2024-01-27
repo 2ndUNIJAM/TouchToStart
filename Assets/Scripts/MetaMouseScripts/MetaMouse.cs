@@ -1,18 +1,25 @@
+using System;
 using System.Collections.Generic;
+using TouchToStart;
 using TouchToStart.Sound;
 using UnityEngine;
 
 public class MetaMouse : MonoBehaviour
 {
-    public static MetaMouse ZeroDepthMouse => MouseList[0];
+    public static MetaMouse ZeroDepthMouse => MouseList[CameraSplit.instance.CurrentFirstCamIndex];
     public static List<MetaMouse> MouseList = new List<MetaMouse>();
-    public float Speed;
+    public int Number;
 
     [HideInInspector] public Vector2 StartPosition;
 
     void Awake()
     {
         MouseList.Add(this);
+    }
+
+    private void Start()
+    {
+        MouseList.Sort((aMouse, bMouse) => aMouse.Number < bMouse.Number ? -1 : aMouse.Number > bMouse.Number ? 1 : 0);
     }
 
     public void MouseMovement(Vector3 direction, float speed)
@@ -56,7 +63,6 @@ public class MetaMouse : MonoBehaviour
     public void MouseReset()
     {
         transform.position = StartPosition;
-        AudioEvents.instance.PlaySound(SoundType.edgedenied);
     }
 
     public void MouseToOrigin()

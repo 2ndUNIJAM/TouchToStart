@@ -16,25 +16,14 @@ namespace TouchToStart
 
         private void Update()
         {
-            float xScale;
-            if (_targetCam.pixelHeight == 0)
-            {
-                xScale = 0;
-            }
-            else
-            {
-                xScale = (_targetCam.pixelWidth / (float)_targetCam.pixelHeight) / CameraSplit.DEFAULT_SCREEN_RATIO;
-            }
+            float xScale = (_targetCam.pixelWidth / (float)_targetCam.pixelHeight) / CameraSplit.DEFAULT_SCREEN_RATIO;
+
+            if (float.IsNaN(xScale) || float.IsInfinity(xScale)) xScale = 0;
             
-            float yScale;
-            if (float.IsNaN(_targetCam.orthographicSize))
-            {
-                yScale = 0;
-            }
-            else
-            {
-                yScale = _targetCam.orthographicSize / CameraSplit.DEFAULT_CAMERA_ORTHOGONAL_SIZE;
-            }
+            float yScale = _targetCam.orthographicSize / CameraSplit.DEFAULT_CAMERA_ORTHOGONAL_SIZE;
+            
+            if (float.IsNaN(yScale) || float.IsInfinity(yScale)) yScale = 0;
+
             Vector3 targetScale = new Vector3(xScale * yScale, yScale);
             transform.localScale = targetScale;
         }

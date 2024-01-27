@@ -26,11 +26,9 @@ public class AudioEvents : Singleton<AudioEvents>
     [SerializeReference]
     public AudioClip[] sounds;
     
+    [SerializeField]
     AudioSource audioSource;
 
-    [SerializeField]
-    public float defaultVolume = 0.8f;
-    
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
@@ -38,6 +36,6 @@ public class AudioEvents : Singleton<AudioEvents>
     }
     public void PlaySound(SoundType soundtype)
     {
-        audioSource.PlayOneShot(sounds[(int)soundtype], defaultVolume);
+        audioSource.PlayOneShot(sounds[(int)soundtype]);
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+using TouchToStart.Sound;
 using UnityEngine;
 
 namespace TouchToStart
@@ -10,6 +11,8 @@ namespace TouchToStart
             if (other.TryGetComponent(out MetaMouse mouse))
             {
                 mouse.MouseReset();
+                if (AudioEvents.instance)
+                    AudioEvents.instance.PlaySound(SoundType.edgedenied);
             }
         }
     }

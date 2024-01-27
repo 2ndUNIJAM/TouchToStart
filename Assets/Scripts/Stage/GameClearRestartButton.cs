@@ -9,8 +9,8 @@ namespace TouchToStart
         {
             if (other.TryGetComponent(out MetaMouse mouse))
             {
-                SceneManager.LoadScene(0);
                 MetaMouse.MouseList.Clear();
+                SceneManager.LoadScene(0);
             }
         }
     }

@@ -67,8 +67,11 @@ namespace TouchToStart
                 {
                     SubStages[i].ClearRemains();
                 }
-            
-                MetaMouse.MouseList.Clear();
+
+                foreach (var mouse in MetaMouse.MouseList)
+                {
+                    mouse.MouseReset();
+                }
                 CurrentSubStage = 0;
 
                 CurrentStage--;
@@ -95,7 +98,10 @@ namespace TouchToStart
                     SubStages[i].ClearRemains();
                 }
             
-                MetaMouse.MouseList.Clear();
+                foreach (var mouse in MetaMouse.MouseList)
+                {
+                    mouse.MouseReset();
+                }
                 CurrentSubStage = 0;
                 
                 CurrentStage++;
@@ -129,6 +135,8 @@ namespace TouchToStart
             StageData = StageListData.Stages[CurrentStage];
             
             PlayerPrefs.SetInt("PlayingStage", CurrentStage);
+
+            FollowMouse.instance.enabled = false;
             
             int targetZoomIndex = (StageData.MaxDepth + 1) / 2 * 2;
             CameraSplit.instance.ZoomIn(targetZoomIndex, () =>
@@ -138,8 +146,12 @@ namespace TouchToStart
                     SubStages[i].ClearRemains();
                 }
                 
-                MetaMouse.MouseList.Clear();
+                foreach (var mouse in MetaMouse.MouseList)
+                {
+                    mouse.MouseReset();
+                }
                 Start();
+                FollowMouse.instance.enabled = true;
             });
         }
 
@@ -167,6 +179,10 @@ namespace TouchToStart
                 SubStages[i].ClearRemains();
             }
             
+            foreach (var mouse in MetaMouse.MouseList)
+            {
+                Destroy(mouse.gameObject);
+            }
             MetaMouse.MouseList.Clear();
             Instantiate(MetaMousePrefab).SetLayerWithChildren(CameraSplit.instance.Cams[0].Cam.gameObject.layer);
             
@@ -185,7 +201,10 @@ namespace TouchToStart
                 SubStages[i].ClearRemains();
             }
             
-            MetaMouse.MouseList.Clear();
+            foreach (var mouse in MetaMouse.MouseList)
+            {
+                mouse.MouseReset();
+            }
             CurrentSubStage = 0;
             
             this[0].Spawn();

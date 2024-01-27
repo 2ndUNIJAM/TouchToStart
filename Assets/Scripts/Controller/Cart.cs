@@ -7,19 +7,21 @@ namespace TouchToStart
     {
         protected override Vector2 CalculateOutput()
         {
-            if (upCollider.OverlapPoint(mousePosition)) { return new Vector2(TargetMouse.transform.right.x, TargetMouse.transform.right.y); }
-            else if (downCollider.OverlapPoint(mousePosition)) { return -new Vector2(TargetMouse.transform.right.x, TargetMouse.transform.right.y); }
+            if (upCollider.OverlapPoint(mousePosition)) { keyIndex = 1; return new Vector2(-TargetMouse.transform.right.y, TargetMouse.transform.right.x); }
+            else if (downCollider.OverlapPoint(mousePosition)) { keyIndex = 3; return -new Vector2(-TargetMouse.transform.right.y, TargetMouse.transform.right.x); }
             else if (leftCollider.OverlapPoint(mousePosition))
             {
+                keyIndex = 4;
                 TargetMouse.transform.eulerAngles += new Vector3(0, 0, angularSpeed * Time.deltaTime);
-                return Vector2.zero;
+                return new Vector2(-TargetMouse.transform.right.y, TargetMouse.transform.right.x);
             }
             else if (rightCollider.OverlapPoint(mousePosition))
             {
+                keyIndex = 2;
                 TargetMouse.transform.eulerAngles -= new Vector3(0, 0, angularSpeed * Time.deltaTime);
-                return Vector2.zero;
+                return new Vector2(-TargetMouse.transform.right.y, TargetMouse.transform.right.x);
             }
-            else { return Vector2.zero;  }
+            else { keyIndex = 0; return Vector2.zero;  }
 
             //return base.CalculateOutput();
         }

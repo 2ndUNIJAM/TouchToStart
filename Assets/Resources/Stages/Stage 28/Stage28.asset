@@ -15,5 +15,5 @@ MonoBehaviour:
   MouseStartPosition: {x: -8.4, y: 0}
   MaxDepth: 4
   StageType: 0
-  GoalPositions: {fileID: 11400000, guid: e32e7876e60f1ab47804ec14a1b864c5, type: 2}
-  ObstaclePositions: {fileID: 11400000, guid: 68acd5c1361f43642a62bb813c4674c7, type: 2}
+  GoalPositions: {fileID: 11400000, guid: a6147c9edacb0e7478cb29b961c9d01a, type: 2}
+  ObstaclePositions: {fileID: 11400000, guid: ae58f4ae643362f478c818c40055aa19, type: 2}

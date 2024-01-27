@@ -12,8 +12,7 @@ public class controlPad : MonoBehaviour
     [HideInInspector]
     public Vector2 mouseVector; // output will be used in next depth mouse
 
-    [SerializeField]
-    private GameObject mouse; // 현재 단계의 가상 마우스 지정
+    public GameObject mouse; // 현재 단계의 가상 마우스 지정
 
     [SerializeField]
     private GameObject upArea;
@@ -59,13 +58,13 @@ public class controlPad : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        mousePosition = mouse.transform.position;
+        // mousePosition = mouse.transform.position;
         // mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
         getIndex(mousePosition);
         mouseVector = giveVector(areaIndex);
 
-        // Debug.Log(nextVector);
+        // Debug.Log(mouseVector);
     }
 
     /*

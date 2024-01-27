@@ -333,6 +333,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: X
       objectReference: {fileID: 0}
+    - target: {fileID: 1829467274373770521, guid: 26eaf53c97b07e14f8d7f3710d47b3dd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3526210890732530996, guid: 26eaf53c97b07e14f8d7f3710d47b3dd, type: 3}
+      propertyPath: centerArea
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 3526210890732530996, guid: 26eaf53c97b07e14f8d7f3710d47b3dd, type: 3}
       propertyPath: mouseVector.x
       value: 0

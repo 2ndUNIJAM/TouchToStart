@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class MetaMouse : MonoBehaviour
 {
+    public static MetaMouse ZeroDepthMouse => MouseList[ZeroDepthMouseIndex];
+    public static int ZeroDepthMouseIndex;
     public static List<MetaMouse> MouseList;
     public float Speed;
 

@@ -173,6 +173,7 @@ MonoBehaviour:
   Data: {fileID: 0}
   ScalableParent: {fileID: 1176864459}
   MetaMouse: {fileID: 0}
+  Controller: {fileID: 0}
   GoalParent: {fileID: 1425592353}
   ObstacleParent: {fileID: 1699987205}
 --- !u!1 &78033165
@@ -219,7 +220,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c885b01821e148e383ef0f1c5ae41708, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TargetDepth: 0
+  TargetDepth: 4
   _targetCam: {fileID: 0}
 --- !u!1 &79926575
 GameObject:
@@ -333,6 +334,7 @@ MonoBehaviour:
   Data: {fileID: 0}
   ScalableParent: {fileID: 1474047911}
   MetaMouse: {fileID: 0}
+  Controller: {fileID: 0}
   GoalParent: {fileID: 1385723494}
   ObstacleParent: {fileID: 1089718156}
 --- !u!1 &644750445
@@ -462,6 +464,7 @@ MonoBehaviour:
   Data: {fileID: 0}
   ScalableParent: {fileID: 729386101}
   MetaMouse: {fileID: 0}
+  Controller: {fileID: 0}
   GoalParent: {fileID: 998035944}
   ObstacleParent: {fileID: 79926576}
 --- !u!1 &941679636
@@ -882,7 +885,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c885b01821e148e383ef0f1c5ae41708, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TargetDepth: 0
+  TargetDepth: 3
   _targetCam: {fileID: 0}
 --- !u!1 &1385723493
 GameObject:
@@ -990,7 +993,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c885b01821e148e383ef0f1c5ae41708, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TargetDepth: 0
+  TargetDepth: 1
   _targetCam: {fileID: 0}
 --- !u!1 &1680826174
 GameObject:
@@ -1042,6 +1045,7 @@ MonoBehaviour:
   Data: {fileID: 0}
   ScalableParent: {fileID: 1773133793}
   MetaMouse: {fileID: 0}
+  Controller: {fileID: 0}
   GoalParent: {fileID: 941679637}
   ObstacleParent: {fileID: 644750446}
 --- !u!1 &1699987204
@@ -1119,7 +1123,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c885b01821e148e383ef0f1c5ae41708, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TargetDepth: 0
+  TargetDepth: 2
   _targetCam: {fileID: 0}
 --- !u!1 &1802711776
 GameObject:
@@ -1202,6 +1206,7 @@ MonoBehaviour:
   Data: {fileID: 0}
   ScalableParent: {fileID: 78033166}
   MetaMouse: {fileID: 0}
+  Controller: {fileID: 0}
   GoalParent: {fileID: 431029257}
   ObstacleParent: {fileID: 1802711777}
 --- !u!1660057539 &9223372036854775807

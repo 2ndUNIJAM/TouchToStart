@@ -42,7 +42,7 @@ public class controlPad : MonoBehaviour
 
 
     // Start is called before the first frame update
-    void onEnable()
+    void OnEnable()
     {
         upCollider = upArea.GetComponent<PolygonCollider2D>();
         downCollider = downArea.GetComponent<PolygonCollider2D>();
@@ -60,9 +60,9 @@ public class controlPad : MonoBehaviour
     {
         // mousePosition = mouse.transform.position;
         // mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-
-        getIndex(mousePosition);
-        mouseVector = giveVector(areaIndex);
+        
+        // getIndex(mousePosition);
+        // mouseVector = giveVector(areaIndex);
 
         // Debug.Log(mouseVector);
     }

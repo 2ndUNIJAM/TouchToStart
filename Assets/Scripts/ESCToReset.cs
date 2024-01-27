@@ -48,5 +48,6 @@ public class ESCToReset : MonoBehaviour
         pressedTime = 0;
         Time.timeScale = 1;
         // PlayerPrefs로 PlayingStage 키에 0 값을 저장하기
+        PlayerPrefs.SetInt("PlayingStage", 0);
     }
 }

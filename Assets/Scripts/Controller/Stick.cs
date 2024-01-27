@@ -4,6 +4,8 @@ namespace TouchToStart
 {
     public class Stick : Controller
     {
+        [SerializeField] private GameObject joyStick;
+
         public float ActiveAreaRadius;
 
         protected override Vector2 CalculateOutput()            // 최종 속도벡터 출력
@@ -13,6 +15,8 @@ namespace TouchToStart
             
             velocity = SameDepthMouseTransform.position;
             velocity = velocity.normalized * Speed;
+
+            joyStick.transform.position = 0.1f*SameDepthMouseTransform.position;
 
             return velocity;
         }

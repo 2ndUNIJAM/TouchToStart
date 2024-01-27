@@ -36,5 +36,6 @@ namespace TouchToStart
 
         [SerializeField]
         private CircleCollider2D centerCollider;
+
     }
 }

@@ -27,7 +27,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: -7, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
+  m_LocalScale: {x: 2.5, y: 2.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5549637208410095352}
@@ -226,7 +226,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: -1, w: 0}
   m_LocalPosition: {x: 7, y: 0, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
+  m_LocalScale: {x: 2.5, y: 2.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5549637208410095352}
@@ -470,14 +470,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TargetMouse: {fileID: 0}
   SameDepthMouse: {fileID: 0}
-  upCollider: {fileID: 7972393310494847209}
-  downCollider: {fileID: 9061006183887123297}
-  leftCollider: {fileID: 7851114871690879010}
-  rightCollider: {fileID: 6852477463156367186}
   wKey: {fileID: 5071464522095913503}
   aKey: {fileID: 6662898909958515893}
   sKey: {fileID: 7158284902175554236}
   dKey: {fileID: 319633688873142155}
+  upCollider: {fileID: 7972393310494847209}
+  downCollider: {fileID: 9061006183887123297}
+  leftCollider: {fileID: 7851114871690879010}
+  rightCollider: {fileID: 6852477463156367186}
   centerCollider: {fileID: 5929788441461198548}
 --- !u!1 &2455753646685893084
 GameObject:
@@ -506,7 +506,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 7, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
+  m_LocalScale: {x: 2.5, y: 2.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5549637208410095352}
@@ -1077,7 +1077,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -7, y: 0, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
+  m_LocalScale: {x: 2.5, y: 2.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5549637208410095352}

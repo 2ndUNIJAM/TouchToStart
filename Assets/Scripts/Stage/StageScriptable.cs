@@ -14,7 +14,7 @@ namespace TouchToStart
     public class StageScriptable : ScriptableObject
     {
         public Vector2 MouseStartPosition;
-
+        public int MaxDepth;
         public StageType StageType;
         
         public PositionScriptable GoalPositions;

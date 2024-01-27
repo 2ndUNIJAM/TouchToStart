@@ -1,9 +1,10 @@
 ﻿using System;
+using TouchToStart.Utility;
 using UnityEngine;
 
 namespace TouchToStart
 {
-    public class FollowMouse : MonoBehaviour
+    public class FollowMouse : Singleton<FollowMouse>
     {
         public float Speed;
         private Vector3 previousPos;

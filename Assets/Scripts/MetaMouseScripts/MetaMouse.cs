@@ -8,6 +8,8 @@ public class MetaMouse : MonoBehaviour
     public static List<MetaMouse> MouseList = new List<MetaMouse>();
     public float Speed;
 
+    [HideInInspector] public Vector2 StartPosition;
+
     void Awake()
     {
         MouseList.Add(this);
@@ -53,7 +55,12 @@ public class MetaMouse : MonoBehaviour
     
     public void MouseReset()
     {
-        transform.position = Vector3.zero;
+        transform.position = StartPosition;
         AudioEvents.instance.PlaySound(SoundType.edgedenied);
+    }
+
+    public void MouseToOrigin()
+    {
+        transform.position = Vector2.zero;
     }
 }

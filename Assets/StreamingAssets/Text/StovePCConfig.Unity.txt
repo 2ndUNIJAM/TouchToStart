@@ -1,0 +1,8 @@
+﻿{
+	"Env": "live",
+	"AppKey": "5a6aa2fbd385902dbb271f013745adfaa59d18d8d6527622068e0b32afb0e85e",
+	"AppSecret": "c34c37d65b8fb395609dac71dcae724f1310099c60d7f866b04531ee9beed86bef4ea7038338bf3e66e0a3b0417e691d",
+	"GameId": "TOUCHTOSTART_IND_DEMO_01_IND",
+	"LogLevel": 4,
+	"LogPath": ""
+}

@@ -11,12 +11,12 @@ namespace TouchToStart
             else if (downCollider.OverlapPoint(mousePosition)) { return new Vector2(0, -1f); }
             else if (leftCollider.OverlapPoint(mousePosition))
             {
-                SameDepthMouse.transform.eulerAngles += new Vector3(0, 0, angularSpeed * Time.deltaTime);
+                TargetMouse.transform.eulerAngles += new Vector3(0, 0, angularSpeed * Time.deltaTime);
                 return Vector2.zero;
             }
             else if (rightCollider.OverlapPoint(mousePosition))
             {
-                SameDepthMouse.transform.eulerAngles -= new Vector3(0, 0, angularSpeed * Time.deltaTime);
+                TargetMouse.transform.eulerAngles -= new Vector3(0, 0, angularSpeed * Time.deltaTime);
                 return Vector2.zero;
             }
             else { return Vector2.zero;  }

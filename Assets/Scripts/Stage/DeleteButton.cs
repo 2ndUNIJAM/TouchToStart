@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections;
+using TouchToStart.Sound;
 using UnityEngine;
 
 namespace TouchToStart
 {
     public class DeleteButton : MonoBehaviour
     {
-        public static event Action OnDeleteButtonClicked;
         public event Action OnButtonClicked;
 
         public float Delay;
@@ -26,7 +26,7 @@ namespace TouchToStart
                 StartCoroutine(DestroyAfter(Delay));
                 GetComponent<Collider2D>().enabled = false;
                 _triggered = true;
-                OnDeleteButtonClicked?.Invoke();
+                AudioEvents.instance.PlaySound(SoundType.fail);
                 OnButtonClicked?.Invoke();
             }
         }

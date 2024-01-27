@@ -8,11 +8,9 @@ public class controlPad : MonoBehaviour
     [SerializeField]
     private float c = 3.0f; // controller 속도
 
-    // 크기 조정하는 스크립트 필요
-    // 원은 1/3 지름
-
-    private Vector2 mousePosition;
-    private Vector2 mouseVector;
+    private Vector2 mousePosition; // current mouse position
+    [HideInInspector]
+    public Vector2 mouseVector; // output will be used in next depth mouse
 
     [SerializeField]
     private GameObject mouse; // 현재 단계의 가상 마우스 지정
@@ -45,27 +43,29 @@ public class controlPad : MonoBehaviour
 
 
     // Start is called before the first frame update
-    void Start()
+    void onEnable()
     {
         upCollider = upArea.GetComponent<PolygonCollider2D>();
         downCollider = downArea.GetComponent<PolygonCollider2D>();
         leftCollider = leftArea.GetComponent<PolygonCollider2D>();
         rightCollider = rightArea.GetComponent<PolygonCollider2D>();
-        centerCollider = centerArea.GetComponent<CircleCollider2D>();
+
+        // centerCollider = GameObject.FindObjectOfType<CircleCollider2D>();
+        centerCollider = centerArea.GetComponent<CircleCollider2D>(); // find circle area in same depth
+
+        //mouse 
     }
 
     // Update is called once per frame
     void Update()
     {
-        /*
-        // mousePosition = mouse.position;
-        mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        mousePosition = mouse.transform.position;
+        // mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
         getIndex(mousePosition);
         mouseVector = giveVector(areaIndex);
 
-        Debug.Log(nextVector);
-        */
+        // Debug.Log(nextVector);
     }
 
     /*

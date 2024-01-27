@@ -187,7 +187,7 @@ namespace TouchToStart
         public void UpdateRect()
         {
             Cam.rect = CamRect;
-            Cam.orthographicSize = CameraSplit.GetCameraOrthogonalSizeWithRatio(Cam.rect);
+            // Cam.orthographicSize = CameraSplit.GetCameraOrthogonalSizeWithRatio(Cam.rect);
         }
 
         // public static implicit operator SplitableCams(Camera cam) => new SplitableCams(cam);

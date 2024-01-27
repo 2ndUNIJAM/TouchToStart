@@ -49,6 +49,7 @@ namespace TouchToStart
             go.SetLayerWithChildren(_layer);
             _clearObjects.Add(go);
             MetaMouse = go.GetComponent<MetaMouse>();
+            MetaMouse.StartPosition = Data.MouseStartPosition;
 
             foreach (var position in Data.GoalPositions.Values)
             {

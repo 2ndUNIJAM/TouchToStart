@@ -653,6 +653,8 @@ MonoBehaviour:
   MetaMousePrefab: {fileID: 1081372471125509893, guid: fd131cdb23bdb314fabd0d1f398cce8a, type: 3}
   StartButtonPrefab: {fileID: 7241724901556284250, guid: 4de328ee2562e8745a85cf1fb2768da0, type: 3}
   DeleteButtonPrefab: {fileID: 3533508501716311750, guid: 9a9288e4bc8d31a45b2201f98c4fa592, type: 3}
+  GameClearRestartButtonPrefab: {fileID: 5698470897600132856, guid: 60d0af767e088e446a867e9ea3ab904f, type: 3}
+  CreditPrefab: {fileID: 4272921246521895255, guid: 7f638f2bf62b6254183ed67d7d60abb5, type: 3}
   WASDPrefab: {fileID: 2162113194167423661, guid: 3751a56c49be1b24da7a44eaaefdb91e, type: 3}
   InverseWASDPrefab: {fileID: 202067888253060345, guid: 8e1c387b5f3bc13409177a6ac4b90e1e, type: 3}
   PadPrefab: {fileID: 4078651587055459011, guid: 19cc6fdfc85ee9446ad0b858b69c73aa, type: 3}

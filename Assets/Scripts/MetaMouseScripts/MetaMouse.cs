@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using TouchToStart.Sound;
 using UnityEngine;
 
 public class MetaMouse : MonoBehaviour
@@ -49,5 +50,10 @@ public class MetaMouse : MonoBehaviour
         vector2 = new Vector2(vector3.x,vector3.y);
         return vector2;
     }
-
+    
+    public void MouseReset()
+    {
+        transform.position = Vector3.zero;
+        AudioEvents.instance.PlaySound(SoundType.edgedenied);
+    }
 }

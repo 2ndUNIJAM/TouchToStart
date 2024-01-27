@@ -31,7 +31,7 @@ public class ESCToReset : MonoBehaviour
             pressedTime = 0;
         }
         circle.fillAmount = pressedTime / SkipTime;
-        skipText.fillAmount = pressedTime * 2 / SkipTime + 0.39f;
+        // skipText.fillAmount = pressedTime * 2 / SkipTime + 0.39f;
 
         // ESC키가 때지면 눌린시간을 리셋
 

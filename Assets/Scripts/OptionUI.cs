@@ -1,4 +1,5 @@
 ﻿using System;
+using TMPro;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
@@ -9,6 +10,7 @@ namespace TouchToStart
     {
         public GameObject UIObject;
         public GameObject ESCToReset;
+        public TextMeshProUGUI StageText;
 
         public Slider VolumeSlider;
         public Slider MouseSpeedSlider;
@@ -33,6 +35,7 @@ namespace TouchToStart
             {
                 UIObject.SetActive(true);
                 ESCToReset.SetActive(true);
+                StageText.text = $"스테이지 {Stage.instance.CurrentStage}";
                 Time.timeScale = 0;
             }
         }

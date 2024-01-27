@@ -6552,6 +6552,56 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TargetDepth: 2
   _targetCam: {fileID: 0}
+--- !u!1 &1774422282
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1774422284}
+  - component: {fileID: 1774422283}
+  m_Layer: 0
+  m_Name: StoveSDKManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1774422283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1774422282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90cd050de0d0bad4f9e39185f70d84ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Env: live
+  AppKey: 5a6aa2fbd385902dbb271f013745adfaa59d18d8d6527622068e0b32afb0e85e
+  AppSecret: c34c37d65b8fb395609dac71dcae724f1310099c60d7f866b04531ee9beed86bef4ea7038338bf3e66e0a3b0417e691d
+  GameId: TOUCHTOSTART_IND_DEMO_01_IND
+  LogLevel: 2
+  LogPath: 
+--- !u!4 &1774422284
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1774422282}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.5705643, y: 0.20819439, z: 0.034454733}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1782690673
 GameObject:
   m_ObjectHideFlags: 0
@@ -8195,3 +8245,4 @@ SceneRoots:
   - {fileID: 1058132329}
   - {fileID: 380432963}
   - {fileID: 2806854238334521440}
+  - {fileID: 1774422284}

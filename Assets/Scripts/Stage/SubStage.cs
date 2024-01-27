@@ -86,6 +86,8 @@ namespace TouchToStart
                 Destroy(go);
             }
             _clearObjects.Clear();
+
+            _startButtonNum = 0;
         }
 
         void StartButtonClick()
@@ -94,27 +96,32 @@ namespace TouchToStart
             if (_startButtonNum <= 0)
             {
                 ClearButtons();
-                GameObject go = null;
-                switch (Data.StageType)
+                
+                if (Stage.instance.CurrentSubStage + 1 <= Data.MaxDepth)
                 {
-                    case StageType.WASD:
-                        go = Instantiate(Stage.instance.WASDPrefab, transform);
-                        break;
-                    case StageType.INVERSE_WASD:
-                        go = Instantiate(Stage.instance.InverseWASDPrefab, transform);
-                        break;
-                    case StageType.PAD:
-                        go = Instantiate(Stage.instance.PadPrefab, transform);
-                        break;
-                    case StageType.CART:
-                        go = Instantiate(Stage.instance.CartPrefab, transform);
-                        break;
+                    GameObject go = null;
+                    switch (Data.StageType)
+                    {
+                        case StageType.WASD:
+                            go = Instantiate(Stage.instance.WASDPrefab, transform);
+                            break;
+                        case StageType.INVERSE_WASD:
+                            go = Instantiate(Stage.instance.InverseWASDPrefab, transform);
+                            break;
+                        case StageType.PAD:
+                            go = Instantiate(Stage.instance.PadPrefab, transform);
+                            break;
+                        case StageType.CART:
+                            go = Instantiate(Stage.instance.CartPrefab, transform);
+                            break;
+                    }
+
+                    go.SetLayerWithChildren(_layer);
+                    _clearObjects.Add(go);
+                    Controller = go.GetComponent<Controller>();
+                    Controller.SameDepthMouse = MetaMouse;
                 }
 
-                go.SetLayerWithChildren(_layer);
-                _clearObjects.Add(go);
-                Controller = go.GetComponent<Controller>();
-                Controller.SameDepthMouse = MetaMouse;
                 Stage.instance.ClearSubStage();
             }
         }

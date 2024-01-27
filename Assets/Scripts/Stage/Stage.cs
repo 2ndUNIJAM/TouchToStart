@@ -76,8 +76,8 @@ namespace TouchToStart
             }
             else
             {
-                SubStages[CurrentSubStage].Spawn();
-                SubStages[CurrentSubStage - 1].Controller.TargetMouse = SubStages[CurrentSubStage].MetaMouse;
+                this[CurrentSubStage].Spawn();
+                this[CurrentSubStage - 1].Controller.TargetMouse = this[CurrentSubStage].MetaMouse;
             }
         }
 
@@ -88,7 +88,10 @@ namespace TouchToStart
                 SubStages[i].ClearRemains();
             }
             
-            SubStages[0].Spawn();
+            MetaMouse.MouseList.Clear();
+            CurrentSubStage = 0;
+            
+            this[0].Spawn();
         }
     }
 }

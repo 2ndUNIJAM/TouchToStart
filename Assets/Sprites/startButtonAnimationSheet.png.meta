@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -108,7 +108,448 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: startButtonAnimationSheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fffe8fe57b598b4c9f00af053d30ec5
+      internalID: -1930208318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: startButtonAnimationSheet_1
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 0
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0486dbaafef4734da835a1a7be9af73
+      internalID: 61562768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: startButtonAnimationSheet_2
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 0
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d909b1b4061e1c49b28fc760a66d68b
+      internalID: 1584274819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: startButtonAnimationSheet_3
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 0
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5b9a024a5a6a244686df1f9aa8636e7
+      internalID: -1114939854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: startButtonAnimationSheet_4
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 0
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 106d740382ea3d340a80e2b1dfd33ce4
+      internalID: 1310143792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: startButtonAnimationSheet_5
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 0
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38b4baa346e11d24dad156421c496535
+      internalID: -1846750205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: startButtonAnimationSheet_6
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 0
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e838565e7bb46f458d8547e2e7dd831
+      internalID: -834566596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: startButtonAnimationSheet_7
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 0
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd25c9e49a4a2674fa078fe89db41e95
+      internalID: -694234976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: startButtonAnimationSheet_8
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 0
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ba729aacca98d84397033a739fd0f40
+      internalID: -235529339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: startButtonAnimationSheet_9
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 0
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21ca4e7b8d995c0449684ccbd9404756
+      internalID: -727078117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: startButtonAnimationSheet_10
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 0
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c56757ca9ad93345903075c7327e649
+      internalID: 1128106988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: startButtonAnimationSheet_11
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 0
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f4f7c942f76b2f4492854586b85b36c
+      internalID: -695637696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: startButtonAnimationSheet_12
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 0
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72a4c19d24d0b684db75d982fb92be44
+      internalID: -1435676857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: startButtonAnimationSheet_13
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 0
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06cebde1f8094fd489481d9a0ac02660
+      internalID: -373217953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: startButtonAnimationSheet_14
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 0
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11985ac6f5e8f6b4eaefb75ee9df4869
+      internalID: 796348602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: startButtonAnimationSheet_15
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 0
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 126528aef7fd1b84983b8c2073b2e36e
+      internalID: 347152880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: startButtonAnimationSheet_16
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 0
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cda9bca1a6961247a88c6ebfae983b2
+      internalID: -339178159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: startButtonAnimationSheet_17
+      rect:
+        serializedVersion: 2
+        x: 561
+        y: 0
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7039dfd4d6c1da4ba550f8d6ca72728
+      internalID: 106787691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: startButtonAnimationSheet_18
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 0
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c2d987ea04316f4fa8d5d2dede07e3d
+      internalID: -1183793685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: startButtonAnimationSheet_19
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 0
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57aff63eb36b4954f9fa32f8b87dca06
+      internalID: 887547826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: startButtonAnimationSheet_20
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 0
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 964f4f64681f4a14e88942f32f25f8f8
+      internalID: -1663001193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -119,7 +560,28 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      startButtonAnimationSheet_0: -1930208318
+      startButtonAnimationSheet_1: 61562768
+      startButtonAnimationSheet_10: 1128106988
+      startButtonAnimationSheet_11: -695637696
+      startButtonAnimationSheet_12: -1435676857
+      startButtonAnimationSheet_13: -373217953
+      startButtonAnimationSheet_14: 796348602
+      startButtonAnimationSheet_15: 347152880
+      startButtonAnimationSheet_16: -339178159
+      startButtonAnimationSheet_17: 106787691
+      startButtonAnimationSheet_18: -1183793685
+      startButtonAnimationSheet_19: 887547826
+      startButtonAnimationSheet_2: 1584274819
+      startButtonAnimationSheet_20: -1663001193
+      startButtonAnimationSheet_3: -1114939854
+      startButtonAnimationSheet_4: 1310143792
+      startButtonAnimationSheet_5: -1846750205
+      startButtonAnimationSheet_6: -834566596
+      startButtonAnimationSheet_7: -694234976
+      startButtonAnimationSheet_8: -235529339
+      startButtonAnimationSheet_9: -727078117
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

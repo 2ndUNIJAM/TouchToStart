@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4284891936923804520}
   - component: {fileID: 6479803405020007130}
+  - component: {fileID: 2297261143035659480}
   m_Layer: 0
   m_Name: sprite
   m_TagString: Untagged
@@ -73,8 +74,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: 8865d13d350e2704fbfd75cf6cf34ca9, type: 3}
-  m_Color: {r: 0, g: 0.08237839, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 5899eee19cd64604cbb559a8a60074e9, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -84,6 +85,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &2297261143035659480
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2810696005577174481}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b404b6ff2d4556549b6825761c5cdc3e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &7241724901556284250
 GameObject:
   m_ObjectHideFlags: 0
@@ -94,8 +116,9 @@ GameObject:
   m_Component:
   - component: {fileID: 7985686433328696286}
   - component: {fileID: 6646210237274907876}
+  - component: {fileID: 7783708325368068465}
   m_Layer: 0
-  m_Name: Goal
+  m_Name: StartButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -152,3 +175,17 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &7783708325368068465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7241724901556284250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87c31ff8367740ddbebdb502f7a63df2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Delay: 1
+  _animator: {fileID: 2297261143035659480}

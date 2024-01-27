@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -108,7 +108,448 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: deleteButtonAnimationSheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a657260d23b2bf4b95318ffca25cf3b
+      internalID: 473712294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deleteButtonAnimationSheet_1
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 0
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb326bb66d46f984090c2a7542ef8b8d
+      internalID: -1093934503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deleteButtonAnimationSheet_2
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 0
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df10b4f48a7748644a34e52c69eec034
+      internalID: 232098899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deleteButtonAnimationSheet_3
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 0
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39dc1451343a51c43a67c5fa16578db2
+      internalID: -1841178566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deleteButtonAnimationSheet_4
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 0
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 310f1c26424d7c048837ecc6d24811d6
+      internalID: -1407575138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deleteButtonAnimationSheet_5
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 0
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1414d38daf59cd44bedfd070c3450e9
+      internalID: 1017009318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deleteButtonAnimationSheet_6
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 0
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83bbf2b74da5d4844ab8432a5bbfa44a
+      internalID: 2058184557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deleteButtonAnimationSheet_7
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 0
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0b80967fed5bd643a1b6dcc0d052389
+      internalID: 2132656055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deleteButtonAnimationSheet_8
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 0
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76698e74055f4c949a3f7899833bf492
+      internalID: -1613996746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deleteButtonAnimationSheet_9
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 0
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb0f82f9a3539db4a95df5fbe6a75b9d
+      internalID: 100074417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deleteButtonAnimationSheet_10
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 0
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a17b432606e3ed4092154b53081e147
+      internalID: 866174459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deleteButtonAnimationSheet_11
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 0
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a59d2712dd6efa646ae1fa3f9a0b8166
+      internalID: -1962780728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deleteButtonAnimationSheet_12
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 0
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1f1a2f0c01d5a6479a8f86a48e89f65
+      internalID: 1575621168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deleteButtonAnimationSheet_13
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 0
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1785cefadea149648bfd7829e2c9e973
+      internalID: -249827802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deleteButtonAnimationSheet_14
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 0
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f58051fad01df074a9e6a235fec8e1c7
+      internalID: 1987758915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deleteButtonAnimationSheet_15
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 0
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c3523763f99363429b2b714316fd043
+      internalID: 786086182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deleteButtonAnimationSheet_16
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 0
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e685a35a48a5d24b98f67d668621925
+      internalID: 463305315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deleteButtonAnimationSheet_17
+      rect:
+        serializedVersion: 2
+        x: 561
+        y: 0
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d16d2a464ef092145ad983a3043a7e98
+      internalID: -1807770132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deleteButtonAnimationSheet_18
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 0
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f88c7c1e34f276c419741ba90a8acc61
+      internalID: 440063485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deleteButtonAnimationSheet_19
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 0
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b74854d1b20842042a1d6b8f695cdccc
+      internalID: 189523320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deleteButtonAnimationSheet_20
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 0
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfdc3c4ab3f2d9c4da933c8cee387329
+      internalID: 1111968896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -119,7 +560,28 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      deleteButtonAnimationSheet_0: 473712294
+      deleteButtonAnimationSheet_1: -1093934503
+      deleteButtonAnimationSheet_10: 866174459
+      deleteButtonAnimationSheet_11: -1962780728
+      deleteButtonAnimationSheet_12: 1575621168
+      deleteButtonAnimationSheet_13: -249827802
+      deleteButtonAnimationSheet_14: 1987758915
+      deleteButtonAnimationSheet_15: 786086182
+      deleteButtonAnimationSheet_16: 463305315
+      deleteButtonAnimationSheet_17: -1807770132
+      deleteButtonAnimationSheet_18: 440063485
+      deleteButtonAnimationSheet_19: 189523320
+      deleteButtonAnimationSheet_2: 232098899
+      deleteButtonAnimationSheet_20: 1111968896
+      deleteButtonAnimationSheet_3: -1841178566
+      deleteButtonAnimationSheet_4: -1407575138
+      deleteButtonAnimationSheet_5: 1017009318
+      deleteButtonAnimationSheet_6: 2058184557
+      deleteButtonAnimationSheet_7: 2132656055
+      deleteButtonAnimationSheet_8: -1613996746
+      deleteButtonAnimationSheet_9: 100074417
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

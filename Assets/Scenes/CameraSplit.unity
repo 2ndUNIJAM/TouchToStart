@@ -131,9 +131,45 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4092002756192048, guid: b653fe99787ad9f4ab21d122395ddcc2, type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0.9245283
+      objectReference: {fileID: 0}
+    - target: {fileID: 4092002756192048, guid: b653fe99787ad9f4ab21d122395ddcc2, type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0.74934757
+      objectReference: {fileID: 0}
+    - target: {fileID: 4092002756192048, guid: b653fe99787ad9f4ab21d122395ddcc2, type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0.21368816
+      objectReference: {fileID: 0}
+    - target: {fileID: 669783859093108247, guid: b653fe99787ad9f4ab21d122395ddcc2, type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0.20990565
+      objectReference: {fileID: 0}
+    - target: {fileID: 669783859093108247, guid: b653fe99787ad9f4ab21d122395ddcc2, type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0.6233418
+      objectReference: {fileID: 0}
+    - target: {fileID: 669783859093108247, guid: b653fe99787ad9f4ab21d122395ddcc2, type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0.8396226
+      objectReference: {fileID: 0}
     - target: {fileID: 868636517216553537, guid: b653fe99787ad9f4ab21d122395ddcc2, type: 3}
       propertyPath: m_Name
       value: Cameras
+      objectReference: {fileID: 0}
+    - target: {fileID: 2841258859139819445, guid: b653fe99787ad9f4ab21d122395ddcc2, type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0.26610893
+      objectReference: {fileID: 0}
+    - target: {fileID: 2841258859139819445, guid: b653fe99787ad9f4ab21d122395ddcc2, type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0.8679245
+      objectReference: {fileID: 0}
+    - target: {fileID: 2841258859139819445, guid: b653fe99787ad9f4ab21d122395ddcc2, type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0.62679535
       objectReference: {fileID: 0}
     - target: {fileID: 5819432899158789893, guid: b653fe99787ad9f4ab21d122395ddcc2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -174,6 +210,30 @@ PrefabInstance:
     - target: {fileID: 5819432899158789893, guid: b653fe99787ad9f4ab21d122395ddcc2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7851400271892160079, guid: b653fe99787ad9f4ab21d122395ddcc2, type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0.25511748
+      objectReference: {fileID: 0}
+    - target: {fileID: 7851400271892160079, guid: b653fe99787ad9f4ab21d122395ddcc2, type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0.25511748
+      objectReference: {fileID: 0}
+    - target: {fileID: 7851400271892160079, guid: b653fe99787ad9f4ab21d122395ddcc2, type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0.8584906
+      objectReference: {fileID: 0}
+    - target: {fileID: 8265620919942129055, guid: b653fe99787ad9f4ab21d122395ddcc2, type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0.55685234
+      objectReference: {fileID: 0}
+    - target: {fileID: 8265620919942129055, guid: b653fe99787ad9f4ab21d122395ddcc2, type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0.9339623
+      objectReference: {fileID: 0}
+    - target: {fileID: 8265620919942129055, guid: b653fe99787ad9f4ab21d122395ddcc2, type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0.2687344
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

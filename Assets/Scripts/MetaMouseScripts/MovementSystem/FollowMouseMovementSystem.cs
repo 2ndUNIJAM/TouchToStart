@@ -10,22 +10,6 @@ public class FollowMouseMovementSystem : MonoBehaviour
     private Vector2 mouseVelocity;
     private MetaMouse metaMouse;
 
-
-    // void Start()
-    // {
-    //     metaMouse = MetaMouse.MouseList[0];
-    //     prevMousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-    // }
-    
-    
-    // void Update()
-    // {
-    //     FollowMouseMovement(mouseSpeed);
-
-    //     metaMouse.MouseMovement(mouseVelocity);
-    // }
-    
-
     Vector2 CalculateVelocity(Vector2 initialPosition, Vector2 finalPosition, float mouseSpeed)
     {
         Vector2 Velocity;

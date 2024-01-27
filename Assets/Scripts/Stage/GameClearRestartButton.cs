@@ -9,6 +9,7 @@ namespace TouchToStart
         {
             if (other.TryGetComponent(out MetaMouse mouse))
             {
+                StovePCSDKManager.instance.RecordLastStart(1);
                 MetaMouse.MouseList.Clear();
                 SceneManager.LoadScene(0);
             }

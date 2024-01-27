@@ -26,6 +26,18 @@ namespace TouchToStart
                 StartCoroutine(DestroyAfter(Delay));
                 GetComponent<Collider2D>().enabled = false;
                 _triggered = true;
+
+                if (PlayerPrefs.HasKey("numDelPress"))
+                {
+                    int s = PlayerPrefs.GetInt("numDelPress");
+                    PlayerPrefs.SetInt("numDelPress", ++s);
+                }
+                else
+                {
+                    PlayerPrefs.SetInt("numDelPress", 1);
+                }
+                StovePCSDKManager.instance.RecordPressDel(PlayerPrefs.GetInt("numDelPress"));
+
                 AudioEvents.instance.PlaySound(SoundType.fail);
                 OnButtonClicked?.Invoke();
             }

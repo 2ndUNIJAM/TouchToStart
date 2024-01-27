@@ -4,10 +4,11 @@ using System.Collections;
 using System.IO;
 using System.Runtime.InteropServices;
 using System.Text;
+using TouchToStart.Utility;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class StovePCSDKManager : MonoBehaviour
+public class StovePCSDKManager : Singleton<StovePCSDKManager>
 {
     // Setting value filled through 'LoadConfig'
     public string Env;
@@ -23,6 +24,8 @@ public class StovePCSDKManager : MonoBehaviour
     private void Awake()
     {
         DontDestroyOnLoad(transform.gameObject);
+        
+        ButtonInitialize_Click();
     }
 
     private void OnDestroy()
@@ -151,6 +154,18 @@ public class StovePCSDKManager : MonoBehaviour
 
         WriteLog(sb.ToString());
     }
+
+    private void BeginQuitAppDueToError() {
+        #region Log
+        StringBuilder sb = new StringBuilder();
+        sb.AppendLine("BeginQuitAppDueToError");
+        sb.AppendFormat(" - nothing");
+        WriteLog(sb.ToString());
+        #endregion
+
+        Application.Quit();
+    }
+
     #endregion
 
 
@@ -252,4 +267,25 @@ public class StovePCSDKManager : MonoBehaviour
         WriteLog(sb.ToString());
     }
     #endregion
+
+    public void RecordMaxStage(int maxStage)
+    {
+        StovePCResult result = StovePC.SetStat("MAX_LEVEL_CLEARED", maxStage);
+    }
+
+    public void RecordPressStart(int numStart)
+    {
+        StovePCResult result = StovePC.SetStat("NUM_PRESS_START", numStart);
+    }
+
+    public void RecordPressDel(int numDel)
+    {
+        StovePCResult result = StovePC.SetStat("NUM_PRESS_DEL", numDel);
+    }
+
+    public void RecordLastStart(int numLStart)
+    {
+        StovePCResult result = StovePC.SetStat("NUM_PRESS_LAST", numLStart);
+    }
+
 }

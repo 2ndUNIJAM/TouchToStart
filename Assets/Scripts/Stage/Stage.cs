@@ -126,6 +126,7 @@ namespace TouchToStart
         public void ClearStage()
         {
             CurrentStage++;
+            StovePCSDKManager.instance.RecordMaxStage(CurrentStage);
 
             if (CurrentStage >= StageListData.Stages.Length)
             {
@@ -152,6 +153,7 @@ namespace TouchToStart
                 }
                 Start();
                 FollowMouse.instance.enabled = true;
+                
             });
         }
 

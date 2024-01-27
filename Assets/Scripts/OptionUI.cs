@@ -49,6 +49,7 @@ namespace TouchToStart
 
         public void ExitGame()
         {
+            StovePCSDKManager.instance.ButtonUninitialize_Click();
 #if UNITY_EDITOR
             EditorApplication.isPlaying = false;
 #else

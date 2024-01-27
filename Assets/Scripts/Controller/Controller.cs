@@ -6,6 +6,7 @@ namespace TouchToStart
     public class Controller : MonoBehaviour
     {
         public MetaMouse TargetMouse;
+        public MetaMouse SameDepthMouse;
 
         public static float Speed = 5;
         protected Vector2 Output;

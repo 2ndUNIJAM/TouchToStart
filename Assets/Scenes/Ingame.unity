@@ -185,7 +185,7 @@ GameObject:
   m_Component:
   - component: {fileID: 78033166}
   - component: {fileID: 78033167}
-  m_Layer: 6
+  m_Layer: 10
   m_Name: Scalable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -261,7 +261,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 431029257}
-  m_Layer: 6
+  m_Layer: 10
   m_Name: Goals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -344,7 +344,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 644750446}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: Obstacles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -473,7 +473,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 941679637}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: Goals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -534,9 +534,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4092002756192048, guid: b653fe99787ad9f4ab21d122395ddcc2, type: 3}
+      propertyPath: m_Depth
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 669783859093108247, guid: b653fe99787ad9f4ab21d122395ddcc2, type: 3}
+      propertyPath: m_Depth
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 868636517216553537, guid: b653fe99787ad9f4ab21d122395ddcc2, type: 3}
       propertyPath: m_Name
       value: Cameras
+      objectReference: {fileID: 0}
+    - target: {fileID: 2841258859139819445, guid: b653fe99787ad9f4ab21d122395ddcc2, type: 3}
+      propertyPath: m_Depth
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5819432899158789893, guid: b653fe99787ad9f4ab21d122395ddcc2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -578,6 +590,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6972852761349153023, guid: b653fe99787ad9f4ab21d122395ddcc2, type: 3}
+      propertyPath: _validRect.y
+      value: 0.055555556
+      objectReference: {fileID: 0}
+    - target: {fileID: 6972852761349153023, guid: b653fe99787ad9f4ab21d122395ddcc2, type: 3}
+      propertyPath: ZoomTweenDuration
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6972852761349153023, guid: b653fe99787ad9f4ab21d122395ddcc2, type: 3}
+      propertyPath: _validRect.height
+      value: 0.8888889
+      objectReference: {fileID: 0}
+    - target: {fileID: 6972852761349153023, guid: b653fe99787ad9f4ab21d122395ddcc2, type: 3}
+      propertyPath: OpenStageTweenDuration
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8265620919942129055, guid: b653fe99787ad9f4ab21d122395ddcc2, type: 3}
+      propertyPath: m_Depth
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -595,6 +627,7 @@ GameObject:
   - component: {fileID: 1058132328}
   - component: {fileID: 1058132331}
   - component: {fileID: 1058132330}
+  - component: {fileID: 1058132332}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: GameController
@@ -615,20 +648,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MetaMousePrefab: {fileID: 1081372471125509893, guid: fd131cdb23bdb314fabd0d1f398cce8a, type: 3}
-  GoalPrefab: {fileID: 7241724901556284250, guid: 4de328ee2562e8745a85cf1fb2768da0, type: 3}
-  ObstaclePrefab: {fileID: 3533508501716311750, guid: 9a9288e4bc8d31a45b2201f98c4fa592, type: 3}
+  StartButtonPrefab: {fileID: 7241724901556284250, guid: 4de328ee2562e8745a85cf1fb2768da0, type: 3}
+  DeleteButtonPrefab: {fileID: 3533508501716311750, guid: 9a9288e4bc8d31a45b2201f98c4fa592, type: 3}
   WASDPrefab: {fileID: 2162113194167423661, guid: 3751a56c49be1b24da7a44eaaefdb91e, type: 3}
   InverseWASDPrefab: {fileID: 202067888253060345, guid: 8e1c387b5f3bc13409177a6ac4b90e1e, type: 3}
-  PadPrefab: {fileID: 502813958442439234, guid: 3212f26d1b0b52344a590c5e256dbd24, type: 3}
+  PadPrefab: {fileID: 4078651587055459011, guid: 19cc6fdfc85ee9446ad0b858b69c73aa, type: 3}
   CartPrefab: {fileID: 3437387376639952332, guid: 5f76872031b8c8e459a45ab9b41d1d53, type: 3}
   BoundaryPrefab: {fileID: 6373250191058325481, guid: ace71f14e48592f4793f4cbd28cb8031, type: 3}
-  StageData: {fileID: 11400000, guid: 9a7d111fb008dea4dbf30b1fb74d2414, type: 2}
+  StageListData: {fileID: 11400000, guid: 64cc016ef75df0241b61b39142a49a96, type: 2}
+  StageData: {fileID: 11400000, guid: 25a8347981ee6a74aa5114917a06cbd7, type: 2}
   SubStages:
   - {fileID: 756405193}
   - {fileID: 518567640}
   - {fileID: 1680826176}
   - {fileID: 7288653}
   - {fileID: 2139724022}
+  CurrentStage: 0
+  CurrentSubStage: 0
 --- !u!4 &1058132329
 Transform:
   m_ObjectHideFlags: 0
@@ -638,7 +674,7 @@ Transform:
   m_GameObject: {fileID: 1058132327}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.6964693, y: -0.15726727, z: -10.02278}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -758,6 +794,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1058132332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1058132327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73efb7488dc644a5b4877d44f9151be5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Speed: 30
 --- !u!1 &1089718155
 GameObject:
   m_ObjectHideFlags: 0
@@ -767,7 +816,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1089718156}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Obstacles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -799,7 +848,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1176864459}
   - component: {fileID: 1176864460}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Scalable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -844,7 +893,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1385723494}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Goals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -875,7 +924,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1425592353}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Goals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -907,7 +956,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1474047911}
   - component: {fileID: 1474047912}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Scalable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1004,7 +1053,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1699987205}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Obstacles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1036,7 +1085,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1773133793}
   - component: {fileID: 1773133794}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: Scalable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1081,7 +1130,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1802711777}
-  m_Layer: 6
+  m_Layer: 10
   m_Name: Obstacles
   m_TagString: Untagged
   m_Icon: {fileID: 0}

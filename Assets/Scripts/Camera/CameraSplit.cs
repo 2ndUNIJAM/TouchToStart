@@ -194,9 +194,6 @@ namespace TouchToStart
         // public static implicit operator Camera(SplitableCams splitableCams) => splitableCams.Cam;
     }
     
-#if UNITY_EDITOR
-    [ExecuteInEditMode]
-#endif
     public class CameraSplit : Singleton<CameraSplit>
     {
         public SplitableCams[] Cams;
@@ -212,10 +209,6 @@ namespace TouchToStart
         public int CurrentFirstCamIndex { get; private set; } = 0;
         public int MaxDepth => Cams.Length;
 
-#if UNITY_EDITOR
-        private bool isInitialized = false;
-        [SerializeField] private bool UpdateInEditMode = false;
-#endif
         private void Awake()
         {
             if (Screen.width > Screen.height * DEFAULT_SCREEN_RATIO)
@@ -244,20 +237,6 @@ namespace TouchToStart
 
         private void Update()
         {
-#if UNITY_EDITOR
-            if (!UpdateInEditMode && !EditorApplication.isPlaying)
-            {
-                isInitialized = false;
-                return;
-            }
-            
-            if (!isInitialized)
-            {
-                print("Camera Split MonoBehaviour update in edit mode Initialize");
-                Start();
-                isInitialized = true;
-            }
-#endif
             Cams[0].ScreenRect.Rect = RenderRect;
             BackgroundCam.rect = RenderRect;
             
@@ -271,6 +250,17 @@ namespace TouchToStart
 
         private void Initialize()
         {
+            Cams[0].ScreenRect.IsHorizontal = false;
+            Cams[0].UseDivided2AsCamRect = false;
+            Cams[1].ScreenRect.IsHorizontal = true;
+            Cams[1].UseDivided2AsCamRect = true;
+            Cams[2].ScreenRect.IsHorizontal = false;
+            Cams[2].UseDivided2AsCamRect = false;
+            Cams[3].ScreenRect.IsHorizontal = true;
+            Cams[3].UseDivided2AsCamRect = true;
+            Cams[4].ScreenRect.IsHorizontal = false;
+            Cams[4].UseDivided2AsCamRect = false;
+            
             for (int i = 0; i < Cams.Length; i++)
             {
                 if (i > 0)
@@ -289,6 +279,8 @@ namespace TouchToStart
                 
                 Cams[i].ScreenRect.Divided1 = new SplitedScreenRect();
                 Cams[i].ScreenRect.Divided2 = new SplitedScreenRect();
+                Cams[i].ScreenRect.SetDivision(0.5f);
+                Cams[i].Cam.depth = i;
             }
         }
 
@@ -309,7 +301,7 @@ namespace TouchToStart
             }
         }
 
-        public void ZoomIn(int camDepth)
+        public void ZoomIn(int camDepth, Action onComplete = null)
         {
             for (int i = 0; i < camDepth; i++)
             {
@@ -323,7 +315,11 @@ namespace TouchToStart
                 }
             }
 
-            StartCoroutine(Wait(ZoomTweenDuration, () => RearrangeCamDepth(camDepth)));
+            StartCoroutine(Wait(ZoomTweenDuration, () =>
+            {
+                RearrangeCamDepth(camDepth);
+                onComplete?.Invoke();
+            }));
         }
 
         IEnumerator Wait(float time, Action action)

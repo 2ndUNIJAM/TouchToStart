@@ -72,10 +72,9 @@ public class AchievementUI : Singleton<AchievementUI>
     }
 
     private int AchieveNumber(int new_mlc, int new_nps, int new_npd, int new_npl) {
-        Debug.Log(new_nps.ToString());
         int achieveNumber = -1;
         if (new_mlc != MAX_LEVEL_CLEARED) {
-            switch (new_mlc) {
+            switch (new_mlc - 1) {
                 case 3:
                     achieveNumber = 1;
                     break;
@@ -117,7 +116,7 @@ public class AchievementUI : Singleton<AchievementUI>
         } else if (new_npd != NUM_PRESS_DEL) {
             if (new_npd == 1) {
                 achieveNumber = 13;
-            } else if (new_npd >= 20) {
+            } else if (new_npd == 20) {
                 achieveNumber = 14;
             }
         } else if (new_npl != NUM_PRESS_LAST) {

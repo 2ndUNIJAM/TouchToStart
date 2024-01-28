@@ -70,5 +70,6 @@ public class MetaMouse : MonoBehaviour
     public void MouseToOrigin()
     {
         transform.position = Vector2.zero;
+        transform.rotation = quaternion.identity;
     }
 }

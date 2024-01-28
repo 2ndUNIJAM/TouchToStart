@@ -287,7 +287,6 @@ public class StovePCSDKManager : Singleton<StovePCSDKManager>
     [ContextMenu("RecordPressStart")]
     public void RecordPressStart(int numStart)
     {
-        Debug.Log("Flag");
         StovePCResult result = StovePC.SetStat("NUM_PRESS_START", ++numStart);
         PlayerPrefs.SetInt("NUM_PRESS_START", numStart);
         AchievementUI.instance.AchieveVarUpdate();

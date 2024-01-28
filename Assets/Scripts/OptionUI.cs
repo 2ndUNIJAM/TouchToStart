@@ -40,8 +40,6 @@ namespace TouchToStart
                 StageText.text = $"스테이지 {Stage.instance.CurrentStage}";
                 Time.timeScale = 0;
 
-                Cursor.visible = true;      //마우스 포인터 보이게 함
-
                 FollowMouse.instance.enabled = false;
             }
         }
@@ -52,14 +50,12 @@ namespace TouchToStart
             ESCToReset.SetActive(false);
             Time.timeScale = 1;
 
-            Cursor.visible = false;          //마우스 포인터 보이게 함
-
             FollowMouse.instance.enabled = true;
         }
 
         public void ExitGame()
         {
-            StovePCSDKManager.instance.ButtonUninitialize_Click();
+            // StovePCSDKManager.instance.ButtonUninitialize_Click();
 #if UNITY_EDITOR
             EditorApplication.isPlaying = false;
 #else

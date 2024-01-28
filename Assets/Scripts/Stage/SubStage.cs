@@ -122,6 +122,7 @@ namespace TouchToStart
                     _clearObjects.Add(go);
                     Controller = go.GetComponent<Controller>();
                     Controller.SameDepthMouse = MetaMouse;
+                    MetaMouse.MouseToOrigin();
                 }
 
                 Stage.instance.ClearSubStage();

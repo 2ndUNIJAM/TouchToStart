@@ -153,11 +153,10 @@ namespace TouchToStart
                 
                 foreach (var mouse in MetaMouse.MouseList)
                 {
-                    mouse.MouseReset();
+                    mouse.MouseToOrigin();
                 }
                 Start();
                 FollowMouse.instance.enabled = true;
-                
             });
         }
 

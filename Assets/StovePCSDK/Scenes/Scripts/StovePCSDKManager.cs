@@ -21,12 +21,12 @@ public class StovePCSDKManager : Singleton<StovePCSDKManager>
     private StovePCCallback callback;
     private Coroutine runcallbackCoroutine;
 
-    private void Awake()
-    {
-        DontDestroyOnLoad(transform.gameObject);
-
-        ButtonInitialize_Click();
-    }
+    // private void Awake()
+    // {
+    //     DontDestroyOnLoad(transform.gameObject);
+    //
+    //     ButtonInitialize_Click();
+    // }
 
     private void OnDestroy()
     {
@@ -172,7 +172,6 @@ public class StovePCSDKManager : Singleton<StovePCSDKManager>
     #region SDK Initialization
     public void ButtonInitialize_Click()
     {
-        WriteLog("Here I Come");
         StovePCResult sdkResult = StovePCResult.NoError;
 
         StovePCConfig config = new StovePCConfig

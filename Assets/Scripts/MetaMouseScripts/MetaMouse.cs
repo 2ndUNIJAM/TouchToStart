@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using TouchToStart;
 using TouchToStart.Sound;
+using Unity.Mathematics;
 using UnityEngine;
 
 public class MetaMouse : MonoBehaviour
@@ -63,6 +64,7 @@ public class MetaMouse : MonoBehaviour
     public void MouseReset()
     {
         transform.position = StartPosition;
+        transform.rotation = quaternion.identity;
     }
 
     public void MouseToOrigin()

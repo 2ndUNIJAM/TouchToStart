@@ -31,7 +31,7 @@ public class AchievementUI : Singleton<AchievementUI>
         NUM_PRESS_DEL = PlayerPrefs.GetInt("NUM_PRESS_DEL");
         NUM_PRESS_LAST = PlayerPrefs.GetInt("NUM_PRESS_LAST");
 
-        icon = this.GetComponentInChildren<Image>();
+        icon = this.transform.Find("Icon").GetComponent<Image>();
         titleText = this.transform.Find("title").GetComponent<TextMeshProUGUI>();
         descriptionText = this.transform.Find("description").GetComponent<TextMeshProUGUI>();
     }

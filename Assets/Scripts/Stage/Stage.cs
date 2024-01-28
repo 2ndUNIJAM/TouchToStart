@@ -40,11 +40,13 @@ namespace TouchToStart
             }
         }
 
+        private void Awake()
+        {
+            CurrentStage = PlayerPrefs.GetInt("PlayingStage", 0);
+        }
+
         private void Start()
         {
-
-            CurrentStage = PlayerPrefs.GetInt("PlayingStage", 0);
-
             StageData = StageListData.Stages[CurrentStage];
             
             foreach (var subStage in SubStages)
@@ -127,6 +129,7 @@ namespace TouchToStart
         public void ClearStage()
         {
             CurrentStage++;
+           
             StovePCSDKManager.instance.RecordMaxStage(CurrentStage);
 
             if (CurrentStage >= StageListData.Stages.Length)
@@ -136,7 +139,7 @@ namespace TouchToStart
             }
             StageData = StageListData.Stages[CurrentStage];
             
-            PlayerPrefs.SetInt("MAX_LEVEL_CLEARED", CurrentStage);
+            
 
             FollowMouse.instance.enabled = false;
             

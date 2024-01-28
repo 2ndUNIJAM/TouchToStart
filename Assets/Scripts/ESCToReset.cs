@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
@@ -41,10 +42,7 @@ public class ESCToReset : MonoBehaviour
     [ContextMenu("ResetAll")]
     void SceneReset()
     {
-        PlayerPrefs.SetInt("MAX_LEVEL_CLEARED", 0);
-        PlayerPrefs.SetInt("NUM_PRESS_START", 0);
-        PlayerPrefs.SetInt("NUM_PRESS_DEL", 0);
-        PlayerPrefs.SetInt("NUM_PRESS_LAST", 0);
+        resetAchievement();
 
         // 현재 씬을 그대로 다시 로드
         MetaMouse.MouseList.Clear();
@@ -55,5 +53,13 @@ public class ESCToReset : MonoBehaviour
         Time.timeScale = 1;
         // PlayerPrefs로 PlayingStage 키에 0 값을 저장하기
         PlayerPrefs.SetInt("PlayingStage", 0);
+    }
+    [MenuItem("Achievement/reset")]
+    static void resetAchievement()
+    {
+        PlayerPrefs.SetInt("MAX_LEVEL_CLEARED", 0);
+        PlayerPrefs.SetInt("NUM_PRESS_START", 0);
+        PlayerPrefs.SetInt("NUM_PRESS_DEL", 0);
+        PlayerPrefs.SetInt("NUM_PRESS_LAST", 0);
     }
 }

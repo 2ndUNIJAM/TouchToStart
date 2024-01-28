@@ -280,6 +280,7 @@ public class StovePCSDKManager : Singleton<StovePCSDKManager>
     public void RecordMaxStage(int maxStage)
     {
         StovePCResult result = StovePC.SetStat("MAX_LEVEL_CLEARED", maxStage);
+        PlayerPrefs.SetInt("MAX_LEVEL_CLEARED", maxStage);
         AchievementUI.instance.AchieveVarUpdate();
     }
 

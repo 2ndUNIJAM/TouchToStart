@@ -15,6 +15,10 @@ public class AchievementUI : Singleton<AchievementUI>
     public List<string> achieveDescriptions;
     public Sprite nullsprite;
 
+    private Queue<int> aQueue;
+
+    private bool queueLock;
+
 
 
     public bool useIngameAchievements; // StovePCSDK의 업적이 잘 안되면 true (인게임에서 업적 보이게 하기), SDK Stove 업적이 성공하면 false.
@@ -25,11 +29,20 @@ public class AchievementUI : Singleton<AchievementUI>
     private Image icon;
     private TextMeshProUGUI titleText, descriptionText;
 
+    [ContextMenu("aQueueTest")]
+    void Test() {
+        for (int i = 0; i < 10; i++) aQueue.Enqueue(i);
+    }
+
     void Start() {
         MAX_LEVEL_CLEARED = PlayerPrefs.GetInt("MAX_LEVEL_CLEARED");
         NUM_PRESS_START = PlayerPrefs.GetInt("NUM_PRESS_START");
         NUM_PRESS_DEL = PlayerPrefs.GetInt("NUM_PRESS_DEL");
         NUM_PRESS_LAST = PlayerPrefs.GetInt("NUM_PRESS_LAST");
+        aQueue = new Queue<int>();
+        aQueue.Clear();
+
+        queueLock = false;
 
         icon = this.transform.Find("Icon").GetComponent<Image>();
         titleText = this.transform.Find("title").GetComponent<TextMeshProUGUI>();
@@ -46,7 +59,15 @@ public class AchievementUI : Singleton<AchievementUI>
         NUM_PRESS_DEL = new_npd;
         NUM_PRESS_LAST = new_npl;
         if (a != -1) {
-            AchieveShow(a);
+            AchievePut(a);
+        }
+    }
+
+    void Update()
+    {
+        if (aQueue.Count > 0 && !queueLock)
+        {
+            AchieveShow(aQueue.Dequeue());
         }
     }
 
@@ -109,8 +130,14 @@ public class AchievementUI : Singleton<AchievementUI>
         return achieveNumber;
     }
 
+    private void AchievePut(int a)
+    {
+        aQueue.Enqueue(a);
+    }
+
     private void AchieveShow(int a)
     {
+        queueLock = true;
         Sprite img;
         string title, description;
         if (a < sprites.Count) {
@@ -127,12 +154,14 @@ public class AchievementUI : Singleton<AchievementUI>
         descriptionText.text = description;
 
         float prevY = transform.localPosition.y;
-        const float dy = 480.0f;
+        const float dy = 240.0f;
         
         // Animate
         transform.DOLocalMoveY(prevY - dy, 0.5f, false).onComplete += (
             () => transform.DOLocalMoveY(prevY - dy, 1.5f, false).onComplete += (
-                () => transform.DOLocalMoveY(prevY, 0.5f, false)
+                () => transform.DOLocalMoveY(prevY, 0.5f, false).onComplete += (
+                    () => {queueLock = false;}
+                )
             ));
     }
 }

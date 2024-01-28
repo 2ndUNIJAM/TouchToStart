@@ -38,8 +38,14 @@ public class ESCToReset : MonoBehaviour
         // ESC키가 눌린시간이 SkipTime보다 크면 Skip을 실행
     }
 
+    [ContextMenu("ResetAll")]
     void SceneReset()
     {
+        PlayerPrefs.SetInt("MAX_LEVEL_CLEARED", 0);
+        PlayerPrefs.SetInt("NUM_PRESS_START", 0);
+        PlayerPrefs.SetInt("NUM_PRESS_DEL", 0);
+        PlayerPrefs.SetInt("NUM_PRESS_LAST", 0);
+
         // 현재 씬을 그대로 다시 로드
         MetaMouse.MouseList.Clear();
 

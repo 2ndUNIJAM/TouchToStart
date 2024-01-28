@@ -136,7 +136,7 @@ namespace TouchToStart
             }
             StageData = StageListData.Stages[CurrentStage];
             
-            PlayerPrefs.SetInt("PlayingStage", CurrentStage);
+            PlayerPrefs.SetInt("MAX_LEVEL_CLEARED", CurrentStage);
 
             FollowMouse.instance.enabled = false;
             

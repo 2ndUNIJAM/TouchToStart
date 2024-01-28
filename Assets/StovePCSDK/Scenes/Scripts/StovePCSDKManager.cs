@@ -21,12 +21,12 @@ public class StovePCSDKManager : Singleton<StovePCSDKManager>
     private StovePCCallback callback;
     private Coroutine runcallbackCoroutine;
 
-    // private void Awake()
-    // {
-    //     DontDestroyOnLoad(transform.gameObject);
-    //
-    //     ButtonInitialize_Click();
-    // }
+    private void Awake()
+    {
+        //DontDestroyOnLoad(transform.gameObject);
+
+        //ButtonInitialize_Click();
+    }
 
     private void OnDestroy()
     {
@@ -172,6 +172,7 @@ public class StovePCSDKManager : Singleton<StovePCSDKManager>
     #region SDK Initialization
     public void ButtonInitialize_Click()
     {
+        WriteLog("Here I Come");
         StovePCResult sdkResult = StovePCResult.NoError;
 
         StovePCConfig config = new StovePCConfig
@@ -275,27 +276,34 @@ public class StovePCSDKManager : Singleton<StovePCSDKManager>
     }
     #endregion
 
+    [ContextMenu("RecordMaxStage")]
     public void RecordMaxStage(int maxStage)
     {
         StovePCResult result = StovePC.SetStat("MAX_LEVEL_CLEARED", maxStage);
         AchievementUI.instance.AchieveVarUpdate();
     }
 
+    [ContextMenu("RecordPressStart")]
     public void RecordPressStart(int numStart)
     {
-        StovePCResult result = StovePC.SetStat("NUM_PRESS_START", numStart);
+        Debug.Log("Flag");
+        StovePCResult result = StovePC.SetStat("NUM_PRESS_START", ++numStart);
+        PlayerPrefs.SetInt("NUM_PRESS_START", numStart);
         AchievementUI.instance.AchieveVarUpdate();
     }
 
+    [ContextMenu("RecordPressDel")]
     public void RecordPressDel(int numDel)
     {
         StovePCResult result = StovePC.SetStat("NUM_PRESS_DEL", numDel);
         AchievementUI.instance.AchieveVarUpdate();
     }
 
+    [ContextMenu("RecordPressLast")]
     public void RecordLastStart(int numLStart)
     {
         StovePCResult result = StovePC.SetStat("NUM_PRESS_LAST", numLStart);
+        PlayerPrefs.SetInt("NUM_PRESS_LAST", numLStart);
         AchievementUI.instance.AchieveVarUpdate();
     }
 

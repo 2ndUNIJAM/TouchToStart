@@ -4,6 +4,8 @@ using UnityEngine;
 using TouchToStart.Utility;
 using UnityEngine.UI;
 using TMPro;
+using DG.Tweening;
+using System.Runtime.InteropServices;
 
 public class AchievementUI : Singleton<AchievementUI>
 {
@@ -35,6 +37,7 @@ public class AchievementUI : Singleton<AchievementUI>
     }
 
     public void AchieveVarUpdate() {
+
         int new_mlc = PlayerPrefs.GetInt("MAX_LEVEL_CLEARED"), new_nps = PlayerPrefs.GetInt("NUM_PRESS_START"),
             new_npd = PlayerPrefs.GetInt("NUM_PRESS_DEL"), new_npl = PlayerPrefs.GetInt("NUM_PRESS_LAST");
         int a = AchieveNumber(new_mlc, new_nps, new_npd, new_npl);
@@ -48,6 +51,7 @@ public class AchievementUI : Singleton<AchievementUI>
     }
 
     private int AchieveNumber(int new_mlc, int new_nps, int new_npd, int new_npl) {
+        Debug.Log(new_nps.ToString());
         int achieveNumber = -1;
         if (new_mlc != MAX_LEVEL_CLEARED) {
             switch (new_mlc) {
@@ -105,7 +109,8 @@ public class AchievementUI : Singleton<AchievementUI>
         return achieveNumber;
     }
 
-    private void AchieveShow(int a) {
+    private void AchieveShow(int a)
+    {
         Sprite img;
         string title, description;
         if (a < sprites.Count) {
@@ -120,5 +125,13 @@ public class AchievementUI : Singleton<AchievementUI>
         icon.sprite = img;
         titleText.text = title;
         descriptionText.text = description;
+
+        float prevY = transform.localPosition.y;
+        
+        // Animate
+        transform.DOLocalMoveY(prevY - 240.0f, 0.5f, false).onComplete += (
+            () => transform.DOLocalMoveY(prevY - 240.0f, 1.5f, false).onComplete += (
+                () => transform.DOLocalMoveY(prevY, 0.5f, false)
+            ));
     }
 }

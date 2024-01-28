@@ -27,6 +27,8 @@ namespace TouchToStart
             MouseSpeedSlider.value = savedMouseSpeed;
             VolumeSlider.onValueChanged.AddListener(OnVolumeChange);
             MouseSpeedSlider.onValueChanged.AddListener(OnMouseSpeedChange);
+
+            Cursor.visible = false;         //마우스 포인터 안 보이게 함
         }
 
         private void Update()
@@ -37,6 +39,8 @@ namespace TouchToStart
                 ESCToReset.SetActive(true);
                 StageText.text = $"스테이지 {Stage.instance.CurrentStage}";
                 Time.timeScale = 0;
+
+                Cursor.visible = true;      //마우스 포인터 보이게 함
             }
         }
 
@@ -45,6 +49,8 @@ namespace TouchToStart
             UIObject.SetActive(false);
             ESCToReset.SetActive(false);
             Time.timeScale = 1;
+
+            Cursor.visible = false;          //마우스 포인터 보이게 함
         }
 
         public void ExitGame()

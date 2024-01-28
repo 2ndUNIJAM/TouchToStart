@@ -21,21 +21,21 @@ namespace TouchToStart
             MetaMouse.ZeroDepthMouse.MouseMovement(Input.mousePosition - previousPos, Speed);
             float mx = Input.mousePosition.x, my = Input.mousePosition.y;
             Vector2 newPos;
-            if (mx > Screen.width)
+            if (mx > Screen.width-9)
             {
-                newPos = new Vector2(0, my);
+                newPos = new Vector2(10, my);
             }
-            else if (mx < 0)
+            else if (mx < 1)
             {
-                newPos = new Vector2(Screen.width, my);
+                newPos = new Vector2(Screen.width-1.5f, my);
             }
-            else if (my > Screen.height)
+            else if (my > Screen.height-9)
             {
-                newPos = new Vector2(mx, 0);
+                newPos = new Vector2(mx, 10);
             }
-            else if (my < 0)
+            else if (my < 1)
             {
-                newPos = new Vector2(mx, Screen.height);
+                newPos = new Vector2(mx, Screen.height-1.5f);
             }
             else
             {

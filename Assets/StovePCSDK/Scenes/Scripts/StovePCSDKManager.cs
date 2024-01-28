@@ -279,21 +279,25 @@ public class StovePCSDKManager : Singleton<StovePCSDKManager>
     public void RecordMaxStage(int maxStage)
     {
         StovePCResult result = StovePC.SetStat("MAX_LEVEL_CLEARED", maxStage);
+        AchievementUI.instance.AchieveVarUpdate();
     }
 
     public void RecordPressStart(int numStart)
     {
         StovePCResult result = StovePC.SetStat("NUM_PRESS_START", numStart);
+        AchievementUI.instance.AchieveVarUpdate();
     }
 
     public void RecordPressDel(int numDel)
     {
         StovePCResult result = StovePC.SetStat("NUM_PRESS_DEL", numDel);
+        AchievementUI.instance.AchieveVarUpdate();
     }
 
     public void RecordLastStart(int numLStart)
     {
         StovePCResult result = StovePC.SetStat("NUM_PRESS_LAST", numLStart);
+        AchievementUI.instance.AchieveVarUpdate();
     }
 
 }

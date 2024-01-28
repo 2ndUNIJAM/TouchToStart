@@ -41,6 +41,8 @@ namespace TouchToStart
                 Time.timeScale = 0;
 
                 Cursor.visible = true;      //마우스 포인터 보이게 함
+
+                FollowMouse.instance.enabled = false;
             }
         }
 
@@ -51,6 +53,8 @@ namespace TouchToStart
             Time.timeScale = 1;
 
             Cursor.visible = false;          //마우스 포인터 보이게 함
+
+            FollowMouse.instance.enabled = true;
         }
 
         public void ExitGame()

@@ -127,10 +127,11 @@ public class AchievementUI : Singleton<AchievementUI>
         descriptionText.text = description;
 
         float prevY = transform.localPosition.y;
+        const float dy = 480.0f;
         
         // Animate
-        transform.DOLocalMoveY(prevY - 240.0f, 0.5f, false).onComplete += (
-            () => transform.DOLocalMoveY(prevY - 240.0f, 1.5f, false).onComplete += (
+        transform.DOLocalMoveY(prevY - dy, 0.5f, false).onComplete += (
+            () => transform.DOLocalMoveY(prevY - dy, 1.5f, false).onComplete += (
                 () => transform.DOLocalMoveY(prevY, 0.5f, false)
             ));
     }

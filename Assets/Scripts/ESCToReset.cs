@@ -1,6 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor;
+// using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
@@ -54,7 +54,7 @@ public class ESCToReset : MonoBehaviour
         // PlayerPrefs로 PlayingStage 키에 0 값을 저장하기
         PlayerPrefs.SetInt("PlayingStage", 0);
     }
-    [MenuItem("Achievement/reset")]
+    //[MenuItem("Achievement/reset")]
     static void resetAchievement()
     {
         PlayerPrefs.SetInt("MAX_LEVEL_CLEARED", 0);

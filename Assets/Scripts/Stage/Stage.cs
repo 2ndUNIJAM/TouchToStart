@@ -42,6 +42,7 @@ namespace TouchToStart
 
         private void Start()
         {
+
             CurrentStage = PlayerPrefs.GetInt("PlayingStage", 0);
 
             StageData = StageListData.Stages[CurrentStage];

@@ -5,6 +5,8 @@ namespace TouchToStart
     public class Stick : Controller
     {
         [SerializeField] private GameObject joyStick;
+        [SerializeField] private CircleCollider2D centerCollider;
+        private Vector2 mousePosition;
 
         public float ActiveAreaRadius;
 
@@ -27,9 +29,10 @@ namespace TouchToStart
 
         protected override bool IsHovering()            //컨트롤 패드에 대해 samedepthmouse가 유효 영역 안에 들어왔는가?(ActiveAreaRadius보다 위치 벡터의 크기가 큰가?)
         {
-            Transform SameDepthMouseTransform = SameDepthMouse.gameObject.transform;
-            float Radius = SameDepthMouseTransform.position.magnitude;                        //samedepthmouse의 중심으로부터의 거리
-
+            mousePosition = SameDepthMouse.transform.position;
+            // Transform SameDepthMouseTransform = SameDepthMouse.gameObject.transform;
+            // float Radius = SameDepthMouseTransform.position.magnitude;                        //samedepthmouse의 중심으로부터의 거리
+            /*
             if(Radius > ActiveAreaRadius)
             {
                 return true;
@@ -38,6 +41,15 @@ namespace TouchToStart
             else
             {
                 return false;
+            }*/
+            if (centerCollider.OverlapPoint(mousePosition))
+            {
+                joyStick.transform.position = Vector3.zero;
+                return false;
+            }
+            else
+            {
+                return true;
             }
         }
     }

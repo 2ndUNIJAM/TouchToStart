@@ -14,7 +14,7 @@ namespace TouchToStart
             {
                 keyIndex = 4;
                 angle = TargetMouse.transform.eulerAngles.z;
-                TargetMouse.transform.eulerAngles = new Vector3(0, 0, angle + 0.5f);
+                TargetMouse.transform.eulerAngles = new Vector3(0, 0, angle + 0.1f*Speed);
                 //TargetMouse.transform.eulerAngles += new Vector3(0, 0, angularSpeed * Time.deltaTime);
                 return new Vector2(-TargetMouse.transform.right.y, TargetMouse.transform.right.x)*0.5f;
             }
@@ -22,7 +22,7 @@ namespace TouchToStart
             {
                 keyIndex = 2;
                 angle = TargetMouse.transform.eulerAngles.z;
-                TargetMouse.transform.eulerAngles = new Vector3(0, 0, angle - 0.5f);
+                TargetMouse.transform.eulerAngles = new Vector3(0, 0, angle - 0.1f*Speed);
                 return new Vector2(-TargetMouse.transform.right.y, TargetMouse.transform.right.x)*0.5f;
                 //TargetMouse.transform.eulerAngles -= new Vector3(0, 0, angularSpeed * Time.deltaTime);
             }

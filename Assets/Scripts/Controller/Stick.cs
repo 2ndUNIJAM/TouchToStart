@@ -18,6 +18,10 @@ namespace TouchToStart
 
             joyStick.transform.position = 0.1f*SameDepthMouseTransform.position;
 
+            if (!IsHovering()) {
+                velocity = Vector2.zero;
+            }
+
             return velocity;
         }
 
